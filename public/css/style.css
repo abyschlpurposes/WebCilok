@@ -1,0 +1,633 @@
+/* Reset & base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: white;
+    color: #000;
+    line-height: 1.4;
+}
+
+/* Navigasi seperti di gambar: HOME | ABOUT US | MENU | PEMESANAN */
+/* Navigasi seperti di gambar: tanpa separator, jarak pas */
+.navbar-custom {
+    padding: 20px 0;
+    border-bottom: px solid #ccc;
+    text-align: center;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 12.5rem;
+    /* jarak antar menu, sesuaikan dengan desain */
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+}
+
+.nav-links a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Konten utama */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Homepage */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+/* Homepage - teks dan tombol warna #A01C24 */
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    white-space: nowrap;
+    color: #A01C24;
+    /* ← warna baru untuk teks */
+}
+
+.btn-order {
+    display: inline-block;
+    background-color: #A01C24;
+    /* ← warna tombol */
+    color: white;
+    border: none;
+    padding: 12px 32px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s;
+
+}
+
+.btn-order:hover,
+.btn-order:focus,
+.btn-order:active {
+    background-color: #7a1520;
+    /* optional, slightly darker */
+    color: white !important;
+    text-decoration: none;
+}
+
+/* About page */
+.about-text {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.contact-box {
+    margin-top: 2rem;
+    text-align: center;
+    border-top: none;
+    /* hapus garis pemisah jika tidak diinginkan */
+    padding-top: 2rem;
+}
+
+.contact-box h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.contact-info p {
+    margin: 0.3rem 0;
+}
+
+/* Menu grid – 3 kolom seperti Figma */
+/* Menu grid - 3 kolom seperti Figma */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu-item {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 1.5rem 0.5rem;
+    background: #fff;
+}
+
+.menu-name {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.menu-price {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: black;
+    /* warna harga seperti Figma (opsional) */
+}
+
+.btn-tambah {
+    background-color: #A01C24;
+    border: none;
+    color: white;
+    padding: 6px 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: 0.2s;
+}
+
+.btn-tambah:hover {
+    background-color: #7a1520;
+    color: white;
+}
+
+
+/* Cart sidebar – sederhana */
+.cart-sidebar {
+    position: fixed;
+    right: -350px;
+    top: 0;
+    width: 350px;
+    height: 100%;
+    background: white;
+    border-left: 1px solid #ccc;
+    transition: 0.3s;
+    z-index: 1000;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-sidebar.active {
+    right: 0;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.cart-items {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.cart-footer {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.cart-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 999;
+}
+
+/* Form pemesanan */
+/* Form pemesanan */
+.order-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.order-form input,
+.order-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    transition: 0.2s;
+}
+
+.order-form input:focus,
+.order-form textarea:focus {
+    outline: none;
+    border-color: #A01C24;
+    box-shadow: 0 0 0 2px rgba(160, 28, 36, 0.2);
+}
+
+.order-form button {
+    background-color: #A01C24;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+    border-radius: 4px;
+}
+
+.order-form button:hover {
+    background-color: #7a1520;
+}
+
+
+
+/* Success page */
+.success-box {
+    text-align: center;
+    max-width: 500px;
+    margin: 3rem auto;
+    padding: 2rem;
+    border: 1px solid #ddd;
+}
+
+/* Responsive */
+/* Tombol Tambahkan di menu */
+.btn-tambah {
+    background-color: #A01C24;
+    border: none;
+    color: white;
+    padding: 6px 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: 0.2s;
+}
+
+.btn-tambah:hover {
+    background-color: #7a1520;
+}
+
+/* Floating cart button */
+.cart-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #A01C24;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.cart-toggle:hover {
+    background-color: #7a1520;
+}
+
+/* Tombol Pesan Sekarang */
+.btn-order,
+.cart-footer .btn-order,
+#checkoutBtn {
+    background-color: #A01C24;
+    color: white;
+    border: none;
+    padding: 12px 32px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-order:hover,
+.cart-footer .btn-order:hover,
+#checkoutBtn:hover {
+    background-color: #7a1520;
+
+}
+
+/* Optional: also change hover color */
+.nav-links a:hover {
+    color: #A01C24;
+}
+
+/* Carousel menu */
+.menu-carousel {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-container {
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* Tombol panah */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.carousel-arrow:hover {
+    background: #A01C24;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Dots indicator */
+.carousel-dots {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #A01C24;
+}
+
+/* Carousel menu */
+.menu-carousel {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 60px;
+    /* ruang untuk arrow dan dots */
+}
+
+.carousel-container {
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* Tombol panah di bawah, kiri dan kanan */
+.carousel-arrow {
+    position: absolute;
+    bottom: 10px;
+    background: #A01C24;
+    color: white;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    z-index: 10;
+}
+
+.carousel-arrow:hover {
+    background: #7a1520;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+/* Dots indicator */
+.carousel-dots {
+    text-align: center;
+    margin-top: 0.5rem;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #A01C24;
+}
+
+/* Carousel menu */
+/* Carousel menu */
+.menu-carousel {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.carousel-container {
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* Dua arrow di tengah, tanpa dots */
+.carousel-arrows {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.carousel-arrow {
+    background-color: #A01C24;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.carousel-arrow:hover {
+    background-color: #7a1520;
+}
+
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Dots di tengah bawah (di antara kedua arrow) */
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #A01C24;
+}
+
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .carousel-arrow {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+    }
+}
+
+.carousel-arrow:hover {
+    background: #7a1520;
+}
+
+.carousel-dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #A01C24;
+}
+
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .carousel-arrow {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+}
