@@ -1,99 +1,144 @@
 @extends('layouts.app')
 
 @section('content')
-<style>
-    .about-wrapper {
-        display: flex;
-        justify-content: center;
-        padding: 60px 20px;
-    }
-    .about-main-card {
-        background-color: var(--bg-color); /* Very light grey outer canvas */
-        border-radius: 40px; /* Extremely rounded */
-        max-width: 950px;
-        width: 100%;
-        padding: 45px; /* Even padding all around */
-        box-shadow: 0 8px 20px rgba(0,0,0,0.15); 
-        display: flex;
-        flex-direction: column;
-        gap: 35px; /* Creates the space between the red box and the contact box natively */
-        border: 1px solid var(--border-color);
-    }
-    .about-card-red {
-        background-color: #a4232a;
-        color: white;
-        border-radius: 25px;
-        padding: 35px 45px;
-        font-size: 1.1rem;
-        font-weight: 500;
-        line-height: 1.6;
-        text-align: justify;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-    }
-    .about-card-contact {
-        background-color: var(--card-bg);
-        border-radius: 35px;
-        padding: 35px 50px;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-        border: 1px solid var(--border-color);
-    }
-    .about-card-contact h3 {
-        font-weight: 800;
-        color: var(--text-color);
-        margin-bottom: 20px;
-        font-size: 1.4rem;
-    }
-    .contact-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 0;
-        border-bottom: 2px solid var(--border-color); /* Distinct grey line separating entries */
-        font-size: 1.25rem;
-        color: var(--text-color);
-        margin-bottom: 10px;
-    }
-    .contact-icon {
-        font-size: 2rem;
-    }
-    .icon-wa {
-        color: #25D366; 
-    }
-    .icon-ig {
-        background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    
-    @media (max-width: 800px) {
-        .about-main-card {
-            padding: 25px;
-        }
-        .about-card-red, .about-card-contact {
-            padding: 20px;
-        }
-    }
-</style>
+<link href="{{ asset('css/about.css') }}" rel="stylesheet">
 
-<div class="about-wrapper">
-    <div class="about-main-card">
-        <!-- TOP NESTED BLOCK (Red) -->
-        <div class="about-card-red">
-            Selamat datang di Warung Cilok Pedas Mak Pik! Kami memulai usaha ini dengan semangat menghadirkan jajanan sederhana yang penuh rasa dan kenangan, menyajikan cilok kenyal dari bahan pilihan dengan bumbu kacang khas serta sambal pedas yang menggugah selera. Kami berkomitmen menjaga kualitas dengan bahan yang fresh dan tanpa bahan berbahaya, sehingga setiap porsi dibuat dengan cinta dan menghadirkan sensasi pedas gurih yang bikin nagih—setiap gigitan adalah pengalaman nikmat yang siap memanjakan lidah Anda! 🌶️
-        </div>
-        
-        <!-- BOTTOM NESTED BLOCK (Darker Grey) -->
-        <div class="about-card-contact">
-            <h3>CONTACT US</h3>
-            <div class="contact-row">
-                <span>0896-1387-9206</span>
-                <i class="fab fa-whatsapp contact-icon icon-wa"></i>
+<div class="about-page-wrapper">
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="hero-left">
+            <div class="hero-badge">
+                <i class="fa-solid fa-fire"></i> THE SPICY HERITAGE
             </div>
-            <div class="contact-row">
-                <span>@cilokpedaswarungmakpik</span>
-                <i class="fab fa-instagram contact-icon icon-ig"></i>
+            <h1 class="hero-title">The Heart Behind the <span class="text-red">Heat</span></h1>
+            <p class="hero-desc">More than just street food, Cilok Pedas Mak Pik is a tribute to the bustling night markets and the legendary recipe passed down through generations.</p>
+        </div>
+        <div class="hero-right">
+            <div class="hero-img-box">
+                <!-- Using a placeholder or styled background if the image isn't available, but we'll put an img tag that can be easily replaced -->
+                <img src="https://images.unsplash.com/photo-1563514253100-348638bd1b49?auto=format&fit=crop&w=400&q=80" alt="Artisan Spicy Cilok" onerror="this.style.display='none'" style="border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.5);">
+            </div>
+            <div class="hero-quote-card">
+                <div class="hero-quote-text">"Authenticity in every bite."</div>
+                <div class="hero-quote-author">— Mak Pik herself</div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Our Journey -->
+    <section class="journey-section">
+        <div class="section-header">
+            <h2>Our Journey</h2>
+            <p>From a small humble cart to the city's favorite spicy destination, we've stayed true to our roots.</p>
+        </div>
+        <div class="journey-grid">
+            <!-- 1. The Vision -->
+            <div class="j-card card-vision">
+                <div class="card-vision-content">
+                    <div class="j-icon">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h3 class="j-title">The Vision</h3>
+                    <p class="j-desc">To revolutionize the street food experience by blending traditional heirloom recipes with modern branding, making Mak Pik the global standard for Indonesian spicy snacks.</p>
+                </div>
+                <div class="card-vision-img">
+                    <span>Spicy Vibes</span>
+                </div>
+            </div>
+
+            <!-- 2. Our Mission -->
+            <div class="j-card card-mission">
+                <div class="j-icon">
+                    <i class="fa-solid fa-rocket"></i>
+                </div>
+                <h3 class="j-title" style="color: white;">Our Mission</h3>
+                <p class="j-desc">To serve happiness through high-quality, safe, and mouth-watering spicy snacks that ignite the spirit of the Indonesian night market.</p>
+            </div>
+
+            <!-- 3. The Origin -->
+            <div class="j-card card-origin">
+                <div class="j-icon">
+                    <i class="fa-solid fa-arrow-up-right-dots"></i>
+                </div>
+                <h3 class="j-title">The Origin</h3>
+                <p class="j-desc">Started in 2012 by Mak Pik, whose secret sauce became a neighborhood legend. She believed that "heat" shouldn't just hurt — it should dance on the palate.</p>
+                <div class="founder-box">
+                    <div class="founder-avatar" style="background-image: url('https://randomuser.me/api/portraits/women/68.jpg');"></div>
+                    <div class="founder-name">Founded by Mak Pik</div>
+                </div>
+            </div>
+
+            <!-- 4. The Secret Craft -->
+            <div class="j-card card-craft">
+                <div class="card-craft-content">
+                    <div class="craft-tags">
+                        <span>100% HANDMADE</span>
+                        <span class="tag-red">SPICE SCALE 10+</span>
+                    </div>
+                    <h3 class="j-title">The Secret Craft</h3>
+                    <p class="j-desc">Our cilok is kneaded daily using premium tapioca flour and steamed to the perfect 'chewy' consistency that locals love.</p>
+                </div>
+                <div class="card-craft-img" style="background-image: url('https://images.unsplash.com/photo-1615486511484-92e172fc34ea?auto=format&fit=crop&w=500&q=80');"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Spicy Values -->
+    <section class="values-section">
+        <div class="values-left">
+            <h2>Our Spicy<br>Values</h2>
+            <p>We are guided by the heat of our passion and the warmth of our community.</p>
+        </div>
+        <div class="values-right">
+            <div class="val-card">
+                <div class="val-icon">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <h3>Passion First</h3>
+                <p>Every bowl is served with genuine Indonesian hospitality.</p>
+            </div>
+            <div class="val-card">
+                <div class="val-icon">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+                <h3>Pure Quality</h3>
+                <p>We source only the freshest bird's eye chilies from local farmers.</p>
+            </div>
+            <div class="val-card">
+                <div class="val-icon">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <h3>Inclusion</h3>
+                <p>Street food for everyone, from teenagers to spice veterans.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dark CTA -->
+    <section class="dark-cta-section">
+        <div class="dark-cta">
+            <h2>Ready to test your limits?</h2>
+            <p>Join thousands of heat-seekers who have discovered the legendary taste of Mak Pik.</p>
+            <div class="dark-cta-buttons">
+                <a href="{{ route('menu') }}" class="btn-cta-red">Explore Our Menu</a>
+                <a href="{{ route('home') }}" class="btn-cta-grey">Find a Branch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Area (Same as Homepage) -->
+    <footer class="footer-custom">
+        <h3 class="footer-title">Cilok Mak Pik</h3>
+        <div class="footer-links" style="margin-bottom: 2rem; margin-top: 2rem;">
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+            <a href="#">WhatsApp</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Cilok Pedas Mak Pik. All Rights Reserved.
+        </div>
+    </footer>
 </div>
 @endsection
