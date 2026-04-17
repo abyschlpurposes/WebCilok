@@ -16,16 +16,13 @@
         </div>
         <div class="hero-image-wrapper">
             <div class="hero-blob">
-                <div class="hero-chara">
-                    <div class="hero-mouth"></div>
-                </div>
                 <div class="hero-badge-1">
                     <i class="fa-solid fa-check-circle"></i>
-                    <div>100%<br>Bahan Fresh</div>
+                    <div>100%<br>Bahan Fresh dan halal</div>
                 </div>
                 <div class="hero-badge-2">
                     <span style="font-size: 1.2rem;">🌶️</span>
-                    <div><span>Mercon Jumbo</span><br>Rp 15k</div>
+                    <div><span>Pentol Gongso</span><br>Rp 5k</div>
                 </div>
             </div>
         </div>
@@ -43,7 +40,6 @@
                     <h3>Spicy Levels<br>Untuk Semua Lidah</h3>
                     <p>Dari "Anget-Anget Kuku" sampai level "Neraka Bocor". Kami menggunakan 5 jenis cabai pilihan yang diolah segar setiap hari.</p>
                     <div class="tags">
-                        <span class="tag tag-yellow">Level 1-10</span>
                         <span class="tag tag-red">Rawit Asli</span>
                     </div>
                 </div>
@@ -69,7 +65,7 @@
                             <h3>Bumbu Rahasia Sejak 2015</h3>
                             <p>Warisan resep Mak Pik yang konsisten pedasnya, gurihnya, dan bikin nagihnya. Tidak ada yang bisa meniru resep otentik kami.</p>
                         </div>
-                        <div class="card-bumbu-img"></div>
+                        <div class="card-bumbu-img"><img src="{{ asset('images/foto1.jpg') }}" alt="Foto" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"></div>
                     </div>
                 </div>
             </div>

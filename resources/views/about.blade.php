@@ -15,11 +15,10 @@
         </div>
         <div class="hero-right">
             <div class="hero-img-box">
-                <img src="https://images.unsplash.com/photo-1563514253100-348638bd1b49?auto=format&fit=crop&w=400&q=80" alt="Cilok Pedas Artisan" onerror="this.style.display='none'" style="border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.5);">
             </div>
             <div class="hero-quote-card">
                 <div class="hero-quote-text">"Sekali nyoba, susah berhenti."</div>
-                <div class="hero-quote-author">— Mak Pik sendiri</div>
+                <div class="hero-quote-author">— Owner</div>
             </div>
         </div>
     </section>
@@ -40,9 +39,7 @@
                     <h3 class="j-title">Visi Kita</h3>
                     <p class="j-desc">Resep lama tetap jadi dasar, tapi dibawa dengan gaya yang lebih modern.
 Harapannya? Mak Pik bisa dikenal lebih jauh, bahkan sampai luar sana.</div>
-                <div class="card-vision-img">
-                    <span>Nuansa Pedas</span>
-                </div>
+                <div class="card-vision-img" style="background-image: url('{{ asset('images/orgjualan.jpg') }}'); background-size: cover; background-position: center;"></div>
             </div>
 
             <!-- 2. Misi Kita -->
@@ -60,10 +57,10 @@ Harapannya? Mak Pik bisa dikenal lebih jauh, bahkan sampai luar sana.</div>
                     <i class="fa-solid fa-arrow-up-right-dots"></i>
                 </div>
                 <h3 class="j-title">Pesan Owner</h3>
-                <p class="j-desc">Sejak 2012, Mak Pik udah ngeracik sausnya sendiri dan lama-lama jadi favorit di sekitar.
+                <p class="j-desc">Sejak 2020, Mak Pik udah ngeracik sausnya sendiri dan lama-lama jadi favorit di sekitar.
 Menurut dia, pedas itu bukan soal kuat-kuatan tapi soal rasa yang bikin nagih.</p>
                 <div class="founder-box">
-                    <div class="founder-avatar" style="background-image: url('https://randomuser.me/api/portraits/women/68.jpg');"></div>
+                    <div class="founder-avatar" style="background-image: url('{{ asset('images/logo.jpeg') }}');"></div>
                     <div class="founder-name">Didirikan oleh Mak Pik -</div>
                 </div>
             </div>
@@ -78,7 +75,7 @@ Menurut dia, pedas itu bukan soal kuat-kuatan tapi soal rasa yang bikin nagih.</
                     <h3 class="j-title">Bumbu Rahasia</h3>
                     <p class="j-desc">Cilok kami diuleni setiap hari menggunakan tepung tapioka premium dan dikukus hingga mencapai konsistensi 'kenyal' sempurna yang dicintai masyarakat lokal.</p>
                 </div>
-                <div class="card-craft-img" style="background-image: url('https://images.unsplash.com/photo-1615486511484-92e172fc34ea?auto=format&fit=crop&w=500&q=80');"></div>
+                <div class="card-craft-img" style="background-image: url('{{ asset('images/foto1.jpg') }}');"></div>
             </div>
         </div>
     </section>
