@@ -134,19 +134,6 @@
         </div>
     </section>
 
-    <!-- Footer Area -->
-    <footer class="footer-custom">
-        <h3 class="footer-title">Cilok Mak Pik</h3>
-        <div class="footer-links" style="margin-bottom: 2rem; margin-top: 2rem;">
-            <a href="#">Instagram</a>
-            <a href="#">TikTok</a>
-            <a href="#">WhatsApp</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Contact</a>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2024 Cilok Pedas Mak Pik. All Rights Reserved.
-        </div>
-    </footer>
+    <!-- Footer removed, now in app.blade.php -->
 </div>
 @endsection
