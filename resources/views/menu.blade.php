@@ -41,6 +41,9 @@
     </div>
 </div>
 
+<!-- Cart Backdrop Overlay -->
+<div id="cartOverlay" class="cart-overlay"></div>
+
 <!-- Cart Sidebar -->
 <div id="cartSidebar" class="cart-sidebar">
     <div class="cart-header">
@@ -133,7 +136,7 @@
         updateCartUI();
         
         // Auto open sidebar when adding an item
-        $('#cartSidebar').addClass('active');
+        openCart();
     });
 
     $(document).on('click', '.inc-qty', function() {
@@ -161,8 +164,19 @@
         updateCartUI();
     });
 
-    $('#cartToggle').click(() => $('#cartSidebar').addClass('active'));
-    $('#closeCart').click(() => $('#cartSidebar').removeClass('active'));
+    function openCart() {
+        $('#cartSidebar').addClass('active');
+        $('#cartOverlay').addClass('active');
+    }
+
+    function closeCart() {
+        $('#cartSidebar').removeClass('active');
+        $('#cartOverlay').removeClass('active');
+    }
+
+    $('#cartToggle').click(openCart);
+    $('#closeCart').click(closeCart);
+    $('#cartOverlay').click(closeCart);
 
     $('#checkoutBtn').click(() => {
         if (cart.length === 0) {
